@@ -41,7 +41,7 @@ basic.forever(function () {
     fileName = "deadbeef"
     if (booted != 0) {
         if (keyAnalog > 980) {
-            basic.showIcon(IconNames.SmallHeart)
+            basic.showIcon(IconNames.EighthNote)
         } else if (keyAnalog > 880 && keyAnalog < 980) {
             basic.showNumber(9)
             fileName = "9"
@@ -70,12 +70,11 @@ basic.forever(function () {
             basic.showNumber(1)
             fileName = "1"
         } else if (keyAnalog < 50) {
-            basic.showNumber(0)
+            DFPlayerPro.MP3_control(DFPlayerPro.ControlType.playPause)
+            basic.showIcon(IconNames.No)
         }
         if (fileName != "deadbeef") {
             DFPlayerPro.MP3_playFilePathName("" + fileName + ".mp3")
-            basic.pause(1000)
         }
     }
-    basic.showIcon(IconNames.Heart)
 })
