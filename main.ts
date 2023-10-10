@@ -1,3 +1,10 @@
+/**
+ * Taste 0: schaltet die Page um auf mehr MP3 abrufen zu können
+ * 
+ * ON: Lied 1-9
+ * 
+ * Taste 0 einmal: Lied 11-19
+ */
 let tempVolume = 0
 let fileName = ""
 let keyAnalog = 0
